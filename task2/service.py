@@ -1,20 +1,21 @@
 from impl import StudentManageImpl
 
+
 class StudentManagerService:
     def __init__(self):
         self.__student_repo = StudentManageImpl()
 
-    def add_student(self, student): # 학생 추가
+    def add_student(self, student):  # 학생 추가
         return self.__student_repo.add_student(student)
 
-    def list_student(self): # 전체 학생 조회
+    def list_student(self):  # 전체 학생 조회
         return self.__student_repo.list_student()
 
-    def search_student(self, student_id): # 학생 조회
+    def search_student(self, student_id):  # 학생 조회
         return self.__student_repo.search_student(student_id)
 
-    def delete_student(self, student_id): # 학생 제거
+    def delete_student(self, student_id):  # 학생 제거
         return self.__student_repo.delete_student(student_id)
 
-    def update_student(self, student_id, student): # 학생 수정
+    def update_student(self, student_id, student):  # 학생 수정
         return self.__student_repo.update_student(student_id, student)
