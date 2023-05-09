@@ -14,7 +14,7 @@
 - repo.py : `StudentManagerRepo` 클래스가 있는 파일
 - impl.py : `StudentManageImpl` 클래스가 있는 파일
 - .gitignore : terminal로 python을 실행할때마다 `__pycache__` 디렉터리 내의 파일이 업데이트 되길래 추가함
-- code_review.md : 해당 과제에 대한 코드리뷰 내용이 적혀있는 파일
+- [code_review.md](https://github.com/jinu0137/likelion/blob/main/task2/code_review.md) : 해당 과제에 대한 코드리뷰 내용이 적혀있는 파일
 
 ## 실행
 
