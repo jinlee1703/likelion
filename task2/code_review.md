@@ -1,4 +1,4 @@
-## 코드리뷰 내용
+## 코드리뷰1 내용
 
 - reviewer : 김경민
 - date : `23. 5. 9.(화)
@@ -219,3 +219,29 @@ setter메서드를 추가하면 더 좋을 것 같음!
        manager = StudentManagerService()
        main(manager)
    ```
+
+---
+
+## 코드리뷰2 내용
+
+- reviewer : 김경민
+- date : `23. 5. 9.(화)
+
+### 학생 추가할 때마다 계속 정렬 => 추가 시 자리 찾아서 정렬
+
+    ```python
+    def add_student(self, student):
+            # 학생 목록에서 학번 조회 => 이미 존재할 경우 => 추가 실패
+            for i in range(len(self.__student_list)):
+            if self.__student_list[i].student_id == student.student_id:
+            return None
+
+            # 새로운 학생 정보를 학점순으로 적절한 위치에 삽입
+            if self.__student_list[i].gpa < student.gpa:
+            self.__student_list.insert(i, student)
+            return student
+
+            # 학번이 모두 다를 경우 => 리스트 맨 뒤에 새로운 학생 정보 추가
+            self.__student_list.append(student)
+            return student
+    ```
