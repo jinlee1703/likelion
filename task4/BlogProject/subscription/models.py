@@ -1,5 +1,5 @@
 from django.db import models
-from ..blog.models import Blog
+from blog.models import Blog
 from django.contrib.auth.models import User
 
 # Create your models here.

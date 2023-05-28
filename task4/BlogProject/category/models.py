@@ -1,5 +1,5 @@
 from django.db import models
-from ..blog.models import Blog
+from blog.models import Blog
 
 # Create your models here.
 class Category(models.Model):

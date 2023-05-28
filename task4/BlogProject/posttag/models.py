@@ -1,6 +1,6 @@
 from django.db import models
-from ..post.models import Post
-from ..tag.models import Tag
+from post.models import Post
+from tag.models import Tag
 
 # Create your models here.
 class PostTag(models.Model):
