@@ -37,14 +37,14 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     # my_apps
-    "blog",
-    "category",
-    "tag",
-    "post",
-    "comment",
-    "posttag",
-    "subscription",
-    "like",
+    "blog.apps.BlogConfig",
+    "category.apps.CategoryConfig",
+    "tag.apps.TagConfig",
+    "post.apps.PostConfig",
+    "comment.apps.CommentConfig",
+    "posttag.apps.PosttagConfig",
+    "subscription.apps.SubscriptionConfig",
+    "like.apps.LikeConfig",
 ]
 
 MIDDLEWARE = [
