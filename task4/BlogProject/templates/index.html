@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+</head>
+<body>
+    <h1>Welcome to My Blog</h1>
+
+    {% for post in posts %}
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.content }}</p>
+        <p>Author: {{ post.author }}</p>
+        <p>Created at: {{ post.create_dt }}</p>
+        <hr>
+    {% empty %}
+        <p>No posts available.</p>
+    {% endfor %}
+
+    <div class="pagination">
+        {% if posts.has_previous %}
+            <a href="?page={{ posts.previous_page_number }}">previous</a>
+        {% endif %}
+        <span class="current-page">{{ posts.number }}</span>
+        /
+        <span class="total-pages">{{ posts.paginator.num_pages }}</span>
+        {% if posts.has_next %}
+            <a href="?page={{ posts.next_page_number }}">next</a>
+        {% endif %}
+    </div>
+
+    <a href="{% url 'post_create' %}">Create a New Post</a>
+</body>
+</html>

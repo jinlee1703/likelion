@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post Detail</title>
+</head>
+<body>
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.content }}</p>
+    <p>Author: {{ post.author }}</p>
+    <p>Created at: {{ post.create_dt }}</p>
+
+    <a href="{% url 'post_update' post.pk %}">Edit</a>
+    <a href="{% url 'post_delete' post.pk %}">Delete</a>
+</body>
+</html>
